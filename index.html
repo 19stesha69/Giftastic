@@ -3,20 +3,34 @@
     <head>
         <meta charset="UTF-8">
         <meta name="author" content="Stesha McKindle">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>GIFtastic!</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+            crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/style.css">
     </head>
 
     <body>
 
+        <header>
+            <div class="container-fluid">
+                <h1>It's MAGICALLY GifTASTIC!</h1>
+            </div>
+        </header>
+
     <!-------------------------Buttons Go Here--------------------------------------------------->   
     
-    <div class="buttons"></div>
+    <div class="container">
+        <div id="bandButtons"></div>
+    </div>    
+    <!--------------------------Input Form Goes Here--------------------------------------------->
 
+    <div id="userForm"></div>
 
     <!--------------------------GIFs Go Here----------------------------------------------------->
 
-    <div class="gifs"></div>
+    <div id="gifs"></div>
 
     <!-------------------------JavaScript source links------------------------------------------>    
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>

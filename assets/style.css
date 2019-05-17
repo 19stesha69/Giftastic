@@ -1,0 +1,14 @@
+header.container-fluid {
+    
+    height: 50px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+#bandButtons {
+    clear: both;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
