@@ -1,14 +1,76 @@
-header.container-fluid {
-    
-    height: 50px;
+header {
+    background-color: #e56399;
 }
 
-header h1 {
+.container-fluid {
+    padding-top: 25px;
+}
+
+header h1,
+header h3 {
+    font-family: 'Rock Salt', cursive;
+    font-weight: bold;
     text-align: center;
+    letter-spacing: 1rem;
+    line-height: 3rem;
+    padding: 20px;
 }
 
-#bandButtons {
-    clear: both;
-    margin-right: 10px;
-    margin-bottom: 10px;
+h2 {
+    text-align: center;
+    -webkit-animation-name: dancing;
+    -webkit-animation-duration: 2s;
+    animation-name: dancing;
+    animation-duration: 3s;
 }
+
+@keyframes dancing {
+    0% {-ms-transform: rotate(20deg); /* IE 9 */
+        -webkit-transform: rotate(20deg); /* Safari 3-8 */
+        transform: rotate(20deg);}
+    50% {-ms-transform: rotate(-20deg); /* IE 9 */
+         -webkit-transform: rotate(-20deg); /* Safari 3-8 */
+         transform: rotate(-20deg);}
+    100% {-ms-transform: rotate(20deg); /* IE 9 */
+        -webkit-transform: rotate(20deg); /* Safari 3-8 */
+        transform: rotate(20deg);}
+}
+
+ button.jsMade {
+     margin: .5rem;
+     font-size: 1.75rem;
+     color: #e56399;
+     background-color: #000000;
+     border: 1.75px solid #FFD700;
+ }
+
+ fieldset {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+ }
+
+ #submitButton {
+     color: #000000;
+     background-color: #e56399;
+     border: 1.75px solid #FFD700;
+ }
+
+ p {
+     text-align: center;
+ }
+
+ img.bandGif {
+    width: 75%;
+    position: relative;
+    left: 50;
+ } 
+
+ /*TABLET STYLING*/ 
+
+ @media (min-width: 767.98px) {
+    .gifDiv {
+        float: left;
+        margin: 10px;
+    } 
+ }

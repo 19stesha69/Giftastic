@@ -16,15 +16,15 @@ var addTopics = [];
 
 topics: [
     "Oingo Boingo",
-    "Nine Inch Nails",
+    "Elvis Presley",
     "Björk",
     "Duran Duran",
-    "Siouxsie and the Banshees",
     "Sex Pistols",
     "Tom Odell",
     "Tom Waits",
     "Elton John",
-    "Freddie Mercury"
+    "Freddie Mercury",
+    "Siouxsie and the Banshees",
 ],
 
 //Function to create buttons and attach array topics
@@ -71,7 +71,7 @@ userForm: function () {
               var stillImage = results.images.fixed_height_still.url;
               var gifImage = results.images.fixed_height.url;
 
-              giphyDiv = $("<div>");
+              giphyDiv = $("<div class='gifDiv'>");
 
                 var rating = results.rating;
 
