@@ -10,6 +10,7 @@ var addTopics = [];
  var submitMe;    //Html for form submit button
  var queryURL;    //the URL of the api search request
  var apiKey = "KdLPLmYR2xIjhRZwF8RtpB0O3abx1klt";
+ var w = 0;       //counter for gif sets
  var giphyDiv;    //The divs that contain the gifs
 
  var allTheBandGifs = {
@@ -53,10 +54,8 @@ userForm: function () {
 
  makeSomeDivs: function(click) {
 
-  
-
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        addTopics + "&api_key=" + apiKey + "&limit=10";
+        addTopics + "&offset=" + w + "&api_key=" + apiKey + "&limit=10";
 
         $.ajax({
             url: queryURL,
@@ -71,7 +70,7 @@ userForm: function () {
               var stillImage = results.images.fixed_height_still.url;
               var gifImage = results.images.fixed_height.url;
 
-              giphyDiv = $("<div class='gifDiv'>");
+              giphyDiv = $("<div class='gifDiv gifIndex" + i + "'>");
 
                 var rating = results.rating;
 
@@ -87,11 +86,16 @@ userForm: function () {
                 giphyDiv.append(ratingText);
                 giphyDiv.append(bandImage);
 
-                $("#gifs").append(giphyDiv);
+                $("#gifs").prepend(giphyDiv);
               
             }
 
+            w+=10;
+            return w;
+
           });
+
+          
   },
       
         submitABand: function () {
@@ -130,7 +134,7 @@ $(document).on("click", ".bandGif", function(event) {
     console.log(currentBand);
     addTopics.push(currentBand);
     event.preventDefault();
-    $("#gifs").empty();
+    //$("#gifs").empty();  
     allTheBandGifs.makeSomeDivs();
     addTopics = [];
   });
