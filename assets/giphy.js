@@ -2,23 +2,26 @@
 var addTopics = [];
 
  //Variables
- var btnTopic;    //the band associated with a particular button
- var btnIndex;    //the index associated with a particular button
- var gifButton;   //html for button tag and properties
- var band;        //value of the button clicked
- var userChoice;  //Html for form text box
- var submitMe;    //Html for form submit button
- var queryURL;    //the URL of the api search request
+ var btnTopic;     //the band associated with a particular button
+ var btnIndex;     //the index associated with a particular button
+ var gifButton;    //html for button tag and properties
+ var band;         //value of the button clicked
+ var userChoice;   //Html for form text box
+ var submitMe;     //Html for form submit button
+ var queryURL;     //the URL of the api search request
  var apiKey = "KdLPLmYR2xIjhRZwF8RtpB0O3abx1klt";
- var w = 0;       //counter for gif sets
- var giphyDiv;    //The divs that contain the gifs
+ var w = 0;        //counter for gif sets
+ var giphyDiv;     //The divs that contain the gifs
+ var bandDataList; //THe <ul> containing the gif data
+
+ //Functions for the app are collected inside an object called allTheBandGifs
 
  var allTheBandGifs = {
 
 topics: [
     "Oingo Boingo",
     "Elvis Presley",
-    "Björk",
+    "Hozier",
     "Duran Duran",
     "Sex Pistols",
     "Tom Odell",
@@ -26,6 +29,7 @@ topics: [
     "Elton John",
     "Freddie Mercury",
     "Siouxsie and the Banshees",
+    "The Cure"
 ],
 
 //Function to create buttons and attach array topics
@@ -38,7 +42,7 @@ makeAButton:  function() {
     }
 },
 
-//makeAButton();
+//Function to create a text form and submit button
 
 userForm: function () {
   userChoice = "<input type='text'>";
@@ -70,28 +74,42 @@ userForm: function () {
               var stillImage = results.images.fixed_height_still.url;
               var gifImage = results.images.fixed_height.url;
 
-              giphyDiv = $("<div class='gifDiv gifIndex" + i + "'>");
+              var rating = results.rating;
 
-                var rating = results.rating;
+              var gifTitle = results.title;
+              var gifType = results.type;
+              var gifUrl = results.url;
+
+              giphyDiv = $("<div class='image-container gifIndex" + i + "'>");
 
                 var ratingText = $("<p>").text("Rating: " + rating);
 
                 var bandImage = $("<img>");
                 bandImage.addClass("bandGif");
+                bandImage.addClass("img-responisve");
                 bandImage.attr("src", stillImage);
                 bandImage.attr("data-gif", gifImage);
                 bandImage.attr("data-image", stillImage);
                 bandImage.attr("data-index", i);
 
+    
+                var bandUnorderedList = $("<ul class='dataList'>");
+                var bandListTitle = $("<li>").text("Title: " + gifTitle);
+                var bandListType = $("<li>").text("Type: " + gifType);
+                var bandListUrl = $("<li>").text("Url: " + gifUrl);
+
+                bandUnorderedList.append(bandListTitle, bandListType, bandListUrl);
+
+                
                 giphyDiv.append(ratingText);
                 giphyDiv.append(bandImage);
+                giphyDiv.append(bandUnorderedList);
 
                 $("#gifs").prepend(giphyDiv);
               
             }
 
             w+=10;
-            return w;
 
           });
 

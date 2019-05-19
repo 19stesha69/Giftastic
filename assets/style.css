@@ -71,6 +71,11 @@ h2 {
      color: #000000;
      background-color: #e56399;
      border: 1.75px solid #FFD700;
+     font-weight: bold;
+ }
+
+ .gifs {
+     overflow: auto;
  }
 
  p {
@@ -78,18 +83,15 @@ h2 {
  }
 
  img.bandGif {
-    width: 75%;
+    width: 50%;
     position: relative;
     left: 50;
  } 
 
- /*TABLET STYLING*/ 
-
- @media (min-width: 767.98px) {
-    .gifDiv {
-        float: left;
-        margin: 10px;
-    } 
+ li {
+    font-size: 1.5rem;
  }
+
+ 
 
  
