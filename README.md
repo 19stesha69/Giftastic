@@ -9,7 +9,7 @@ The app is responive. Additional clicks of a button will produce another selecti
 
 # Operating Instruction
 As soon as the page loads, the user is free to push any of the buttons, all of them labeled with a different musical arist.
-![](assets/screenshots/gifasticHP.png)
+![](/assets/screenshots/giftasticHP.png)
 Format: ![Alt Text](url)
 Ten gifs will appear, below the buttons, each of them corresponding to the named artist on the button that was pushed. When another button is pushed, another set of ten gifs appears. If the user so chooses, they may enter the name of an artist in to the search field, press the button labeled "What's your jam?". A button, bearing the name of the artist that was typed in to the search field , appears at the bottom of the rows of buttons. More buttons, and gifs, can be created in this manner.
 
