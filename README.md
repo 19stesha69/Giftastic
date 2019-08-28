@@ -3,7 +3,7 @@
 # The App
 Using giphy.com's API, a selection of gifs featuring musical artists are presented when a button is pushed. The user also has the option of creating their own buttons to call up gifs of their choice.
 
-# Overiew
+# Overview
 This app uses an API key from the website GIPHY.com to call 10 gifs related to the subject assigned to the button. It also allows the user to create their own button by submitting a subject via text-box and submit button. 
 The app is responive. Additional clicks of a button will produce another selection of ten gifs. Each gif is presented with the following metadata: title, type, and url.
 
