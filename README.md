@@ -26,4 +26,4 @@ More buttons, and gifs, can be created in this manner.
 
 
 # LINK
-Check it out at https://19stesha69.github.io/Giftastic/
+Check it out at https://steeshmck.github.io/Giftastic/
